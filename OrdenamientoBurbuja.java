@@ -1,16 +1,5 @@
-/*
- * P2A5 Ordenamiento (BS) - Estructuras de Datos y Algoritmos
- * Diego Kamil Olea Ruiz
- *
- * Ordena las temperaturas maximas registradas en Merida (septiembre 2026)
- * en orden ascendente y descendente usando Bubble Sort (ordenacion por
- * intercambio), siguiendo el algoritmo visto en clase: se usa una variable
- * "limite" que se reduce en cada pasada y una bandera "intercambio" que
- * termina el ciclo si en una pasada no hubo cambios.
- */
 public class OrdenamientoBurbuja {
 
-    // Cada registro guarda la temperatura y su fecha
     static class Registro {
         double temperatura;
         String fecha;
@@ -26,7 +15,6 @@ public class OrdenamientoBurbuja {
         }
     }
 
-    // Bubble Sort: ascendente = true -> menor a mayor, false -> mayor a menor
     static void ordenamientoBurbuja(Registro[] datos, boolean ascendente) {
         int n = datos.length;
         int limite = n;
@@ -48,7 +36,6 @@ public class OrdenamientoBurbuja {
                 }
             }
 
-            // Si no hubo intercambios el arreglo ya esta ordenado
             if (!intercambio) {
                 limite = 1;
             } else {
@@ -66,7 +53,6 @@ public class OrdenamientoBurbuja {
     }
 
     public static void main(String[] args) {
-        // Temperaturas maximas en Merida, septiembre 2026 (°C)
         Registro[] temperaturas = {
             new Registro(39.0, "2 sep"),
             new Registro(39.0, "3 sep"),
